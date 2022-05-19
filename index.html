@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Animação jQuery</title>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #quadrado {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+            top: 5%;
+            left: 10%;
+        }
+        #circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            top: 30%;
+            left: 10%;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+
+            $("#quadrado").click(function(){
+                $(this).animate({
+                    width: '500px',
+                    height: '200px'
+                },5000);
+            });
+            $("#circulo").click(function(){
+                $(this).animate({
+                    left: '600px'
+                },5000);
+            });
+            $("img").click(function(){
+                $(this).animate({
+                    left: '600px',
+                    width: '500px',
+                },10000);
+            });
+
+        });
+    </script>
+    <div id="quadrado">
+    </div>
+    <br>
+    <div id="circulo">
+    </div>
+    <br>
+    <div>
+        <img src="/animateJquery/Logo-ifmt.jpg">
+    </div>
+</body>
+</html>
